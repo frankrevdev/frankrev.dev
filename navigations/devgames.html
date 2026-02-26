@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script defer src="/_vercel/insights/script.js"></script>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" href="Images/LOGO2.png">
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="icon" href="../Images/LOGO2.png">
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet"> 
-  <title>Frankrev Dev</title>
+  <title>Frankrev Dev | GAMES</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
   <header>
     <div class="container">
       <div id="logo">
-        <img src="Images/LOGO2.png" alt="Cool Logo!" height="100px">
+        <img src="../Images/LOGO2.png" alt="Cool Logo!" height="100px">
       </div>
       <nav id="site-nav" aria-label="Main navigation">
         <!-- content injected by script -->
@@ -28,9 +28,9 @@
 
   <section class="content">
     <div class="container">
-      <h1>THIS WEBSITE IS UNDER CONSTRUCTION</h1>
+      <h1>THERE IS NOTHING TO SEE HERE YET.</h1>
       <p>
-        Just visit my DevLinks for now, or check back later for updates!
+        Soon to be released :) made in C++
       </p>
     </div>
   </section>
@@ -39,12 +39,9 @@
     // fetch shared nav partial and inject
     fetch('/navigations/nav.html')
       .then(r => r.text())
-      .then(html => {
-        document.getElementById('site-nav').innerHTML = html;
-      })
+      .then(html => document.getElementById('site-nav').innerHTML = html)
       .catch(err => console.error('Nav load failed:', err));
   </script>
 
 </body>
-
 </html>
