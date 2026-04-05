@@ -1,0 +1,36 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --text-color-inner: white;
+    --text-color-stroke: black;
+    --title-bar-bg: black;
+}
+body.dark {
+    --bg-color: #121212;
+    --text-color: white;
+    --text-color-inner: black;
+    --text-color-stroke: white;
+    --title-bar-bg: rgb(138, 138, 138);
+}
+
+body {
+    background-color: var(--bg-color);
+}
+/* From About.css/jsx */
+/* didn't work */
+.titleBar {
+    background-color: var(--title-bar-bg);
+}

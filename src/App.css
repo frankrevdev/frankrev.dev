@@ -1,0 +1,143 @@
+@font-face {
+  font-family: Knewave-Regular;
+  src: url(./assets/Fonts/Knewave/Knewave-Regular.ttf);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  overflow: visible;
+  z-index: 100;
+}
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1800px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.logoContainer {
+  transition: transform 0.3s ease;
+}
+.logoContainer:hover {
+  transform: scale(1.1);
+}
+.logoContainer:active {
+  transform: scale(0.9);
+}
+.logo {
+  height: 50px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.textLinks {
+  transition: all 0.3s ease;
+}
+.textLinks ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.textLinks a {
+  font-family: Knewave-Regular;
+  font-size: 40px;
+  color: white;
+  -webkit-text-stroke: 2px black;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.textLinks a:hover {
+  color: black;
+  -webkit-text-stroke: 2px white;
+}
+.textLinks .active {
+  color: black;
+  -webkit-text-stroke: 2px white;
+}
+
+.burger {
+  transition: transform 0.1s ease;
+}
+.burger:hover {
+  transform: scale(1.1);
+}
+.burger:active {
+  transform: scale(0.9);
+}
+.burger {
+  height: 50px;
+  width: auto;
+  vertical-align: middle;
+}
+
+@media (max-width: 830px) {
+  .textLinkContainer{
+    overflow: hidden;
+  }
+  .textLinks {
+    transform: perspective(500px) scaleY(0.5) rotateX(90deg) translateX(100%);
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 81px; /* below header */
+  right: 20px;
+  width: 150px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid gray;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 200;
+}
+
+.dropdownMenu button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: Knewave-Regular;
+}
+
+.dropdownMenu button:hover {
+  background: white;
+  color: black;
+}
+
+.mainContent {
+  flex: 1;
+  margin-top: 100px; /* To prevent content from being hidden behind the fixed header */
+}
+
+footer {
+  background-color: black;
+  font-family: "Brush Script MT", cursive;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
