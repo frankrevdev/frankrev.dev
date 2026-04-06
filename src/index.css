@@ -5,12 +5,13 @@ html, body, #root {
     overflow-x: hidden;
 }
 
+/* DARK MODE EFFECT */
 * {
     transition:
         background-color 0.3s ease,
         color 0.3s ease;
 }
-
+/* Disabled */
 :root {
     --bg-color: white;
     --text-color: black;
@@ -18,6 +19,7 @@ html, body, #root {
     --text-color-stroke: black;
     --title-bar-bg: black;
 }
+/* Enabled */
 body.dark {
     --bg-color: #121212;
     --text-color: white;
@@ -26,11 +28,10 @@ body.dark {
     --title-bar-bg: rgb(138, 138, 138);
 }
 
+/* Containers and contents that are affected */
 body {
     background-color: var(--bg-color);
 }
-/* From About.css/jsx */
-/* didn't work */
 .titleBar {
     background-color: var(--title-bar-bg);
 }

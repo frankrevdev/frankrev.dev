@@ -3,6 +3,7 @@ import './About.css';
 import { useEffect, useState } from 'react';
 
 import frank from "../assets/Images/myself.jpg";
+import skill_icon from "../assets/Images/p/about/icons/skill-icon.png"
 
 // Get the frames
 const frameCount = 85;
@@ -69,15 +70,19 @@ export default function About({ darkMode }) {
 
     return (
         <>
+            { /* Set page title */ }
             <title>frankrevdev | about</title>
+
+            { /* Main content */ }
+            { /* My introduction container */ }
             <div className="meContainer">
                 <div className="titleBar"></div>
-                <div className="aboutTitle">
-                    <div className="aboutTitleText">
-                        <span className="content-title text-full">Me, Myself and I</span>
-                        <span className="content-title text-mid">Myself</span>
-                        <span className="content-title text-small">Me</span>
-                        <span className="content-title text-tiny">I</span>
+                <div className="titleContainer">
+                    <div className="titleContent">
+                        <span className="content-title title-full">Me, Myself and I</span>
+                        <span className="content-title title-mid">Myself</span>
+                        <span className="content-title title-small">Me</span>
+                        <span className="content-title title-tiny">I</span>
                     </div>
                 </div>
                 <div className="meContent">
@@ -87,7 +92,24 @@ export default function About({ darkMode }) {
                         <p>In my free time, I enjoy playing video games, listening to music and spending myself on the internet exploring new technologies.</p>
                         <p>Feel free to reach out to me if you want to collaborate on a project or just want to chat about technology, gaming or music!</p>
                     </div>
-                    <img src={framePaths[frameIndex]} className="me" alt="Vince Franco Padua"/>
+                    <img src={framePaths[frameIndex]} className="me" alt="Frank"/>
+                </div>
+            </div>
+
+            { /* My skills container */ }
+            <div className="skillsContainer">
+                <div className="titleBar"></div>
+                <div className="titleContainer">
+                    <div className="titleContent">
+                        <span className="content-title title-full">Technical Skills</span>
+                        <span className="content-title title-mid">Skills</span>
+                        <span className="content-title title-small">
+                            <img src={skill_icon} className="skill" alt="Skills" />
+                        </span>
+                    </div>
+                </div>
+                <div className="skillsContent">
+
                 </div>
             </div>
         </>
