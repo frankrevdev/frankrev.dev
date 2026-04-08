@@ -18,6 +18,10 @@ html, body, #root {
     --text-color-inner: white;
     --text-color-stroke: black;
     --title-bar-bg: black;
+
+    --skill-card-border: 1px solid white;
+    --skill-card-border-glow: black;
+    --skill-card-shadow-glow: black;
 }
 /* Enabled */
 body.dark {
@@ -26,6 +30,10 @@ body.dark {
     --text-color-inner: black;
     --text-color-stroke: white;
     --title-bar-bg: rgb(138, 138, 138);
+
+    --skill-card-border: 1px solid black;
+    --skill-card-border-glow: white;
+    --skill-card-shadow-glow: #ccc;
 }
 
 /* Containers and contents that are affected */
@@ -34,4 +42,11 @@ body {
 }
 .titleBar {
     background-color: var(--title-bar-bg);
+}
+.skillCard {
+    border: var(--skill-card-border);
+}
+.skillCard:hover {
+    border-color: var(--skill-card-border-glow);
+    box-shadow: var(--skill-card-shadow-glow);
 }

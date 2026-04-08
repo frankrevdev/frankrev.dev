@@ -88,18 +88,6 @@
   vertical-align: middle;
 }
 
-@media (max-width: 830px) {
-  .textLinkContainer{
-    overflow: hidden;
-  }
-  .textLinks {
-    transform: perspective(500px) scaleY(0.5) rotateX(90deg) translateX(100%);
-  }
-  .burger {
-    display: block;
-  }
-}
-
 .dropdownMenu {
   position: absolute;
   top: 81px; /* below header */
@@ -114,7 +102,12 @@
   gap: 10px;
   z-index: 200;
 }
-
+.mobileNavLinks {
+  display: none;
+}
+.dropdownDivider {
+  display: none;
+}
 .dropdownMenu button {
   background: none;
   border: 1px solid white;
@@ -123,7 +116,6 @@
   cursor: pointer;
   font-family: Knewave-Regular;
 }
-
 .dropdownMenu button:hover {
   background: white;
   color: black;
@@ -140,4 +132,46 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
+}
+
+@media (max-width: 830px) {
+  /*Nav bar collapsed to the menu button*/
+  .textLinkContainer{
+    overflow: hidden;
+  }
+  .textLinks {
+    transform: perspective(500px) scaleY(0.5) rotateX(90deg) translateX(100%); /*This looks shrinked to the right like it swallowed by the menu button*/
+  }
+  .burger {
+    display: block;
+  }
+  .mobileNavLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .mobileNavLinks a {
+    color: white;
+    text-decoration: none;
+    font-family: Knewave-Regular;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+  }
+  .mobileNavLinks a:hover {
+    background: white;
+    border-color: white;
+    color: black;
+  }
+  .dropdownDivider {
+    display: flex;
+    height: 1px;
+    background: white;
+    margin: 8px 0;
+  }
+}
+@media (max-width: 212px) {
+  .dropdownMenu {
+    left: 0px;
+  }
 }

@@ -2,17 +2,64 @@ import './About.css';
 
 import { useEffect, useState } from 'react';
 
-import frank from "../assets/Images/myself.jpg";
 import skill_icon from "../assets/Images/p/about/icons/skill-icon.png"
 
-// Get the frames
+// Get the frames for hero animation
 const frameCount = 85;
 const framePaths = Array.from({ length: frameCount }, (_, i) => 
     new URL(`../assets/Images/Frames/set1/f${i}.jpg`, import.meta.url).href
 );
 
+// Skills
+const skillModules = import.meta.glob('../assets/Images/p/about/icons/skills/*.{png,jpg,svg}', {
+    eager: true,
+    import: 'default'
+});
+const skillOrder = [
+    "cpp",
+    "raylib",
+    "html",
+    "css",
+    "js",
+    "vim",
+    "vs"
+];
+const skills = Object.entries(skillModules).map(([Path2D, src]) => {
+    const key = Path2D.split('/').pop().split('.')[0];
+    const skillNames = {
+        cpp: "C++",
+        css: "CSS",
+        html: "HTML",
+        js: "JavaScript",
+        raylib: "Raylib",
+        vim: "Vim",
+        vs: "Visual Studio"
+    };
+
+    return {
+        key,
+        name: skillNames[key] || key.toUpperCase(),
+        src
+    };
+}).sort((a, b) => {
+    const safeA = skillOrder.indexOf(a.key);
+    const safeB = skillOrder.indexOf(b.key);
+    return (safeA === -1 ? Infinity : safeA) -
+            (safeB === -1 ? Infinity : safeB);
+});
+
+function SkillCard({ name, src }) {
+    return (
+        <div className="skillCard">
+            <img src={src} alt={name} />
+            <span>{name}</span>
+        </div>
+    );
+}
+
 export default function About({ darkMode }) {
 
+    // ANIMATED HERO BY FRAMES
     const [frames, setFrames] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [frameIndex, setFrameIndex] = useState(0);
@@ -104,12 +151,14 @@ export default function About({ darkMode }) {
                         <span className="content-title title-full">Technical Skills</span>
                         <span className="content-title title-mid">Skills</span>
                         <span className="content-title title-small">
-                            <img src={skill_icon} className="skill" alt="Skills" />
+                            <img src={skill_icon} className="skill-icon" alt="Skills" />
                         </span>
                     </div>
                 </div>
                 <div className="skillsContent">
-
+                    {skills.map((skill, index) => (
+                        <SkillCard key={skill.key} {...skill} />
+                    ))}
                 </div>
             </div>
         </>

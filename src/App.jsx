@@ -101,6 +101,14 @@ function App() {
             <img src={burger} alt="Menu" className="burger" />
             {menuOpen && (
               <div className="dropdownMenu">
+                <div className="mobileNavLinks">
+                  <NavLink to="/about">About</NavLink>
+                  <NavLink to="/works">Works</NavLink>
+                  <NavLink to="/games">Games</NavLink>
+                  <NavLink to="/music">Music</NavLink>
+                  <NavLink to="/blogs">Blogs</NavLink>
+                </div>
+                <div className="dropdownDivider"></div>
                 <button onClick={toggleDarkMode}>
                   {darkMode ? "Light Mode" : "Dark Mode"}
                 </button>
