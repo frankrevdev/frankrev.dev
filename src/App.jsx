@@ -5,6 +5,11 @@ import './App.css';
 import burger from "./assets/Images/hamburger.png";
 import Logo from "./assets/Images/logo.png";
 
+import fb from "./assets/Images/socials-links/fb.svg";
+import x from "./assets/Images/socials-links/x.svg";
+import linked from "./assets/Images/socials-links/in.svg";
+import github from "./assets/Images/socials-links/github.svg";
+
 import About from "./pages/About";
 import Blogs from "./pages/Blog";
 import Games from "./pages/Games";
@@ -102,11 +107,11 @@ function App() {
             {menuOpen && (
               <div className="dropdownMenu">
                 <div className="mobileNavLinks">
-                  <NavLink to="/about">About</NavLink>
-                  <NavLink to="/works">Works</NavLink>
-                  <NavLink to="/games">Games</NavLink>
-                  <NavLink to="/music">Music</NavLink>
-                  <NavLink to="/blogs">Blogs</NavLink>
+                  <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About</NavLink>
+                  <NavLink to="/works" className={({ isActive }) => isActive ? "active" : ""}>Works</NavLink>
+                  <NavLink to="/games" className={({ isActive }) => isActive ? "active" : ""}>Games</NavLink>
+                  <NavLink to="/music" className={({ isActive }) => isActive ? "active" : ""}>Music</NavLink>
+                  <NavLink to="/blogs" className={({ isActive }) => isActive ? "active" : ""}>Blogs</NavLink>
                 </div>
                 <div className="dropdownDivider"></div>
                 <button onClick={toggleDarkMode}>
@@ -132,8 +137,22 @@ function App() {
         </Routes>
       </main>
 
-      <footer>
+      <footer className="footer">
         <p>Copyright &copy; 2026 Franco Padua. All rights reserved.</p>
+        <div className="footerLinks">
+          <a href="https://www.facebook.com/frankrev.dev" target="_blank">
+            <img src={fb} alt="Facebook" />
+          </a>
+          <a href="https://www.x.com/frankrevdev" target="_blank">
+            <img src={x} alt="X" />
+          </a>
+          <a href="https://www.linkedin.com/in/vince-franco-padua-b5062a3a6/" target="_blank">
+            <img src={linked} alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/frankrevdev" target="_blank">
+            <img src={github} alt="GitHub" />
+          </a>
+        </div>
       </footer>
     </div>
   );

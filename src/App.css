@@ -2,6 +2,10 @@
   font-family: Knewave-Regular;
   src: url(./assets/Fonts/Knewave/Knewave-Regular.ttf);
 }
+@font-face {
+  font-family: ComicRelief-Regular;
+  src: url(./assets/Fonts/Comic_Relief/ComicRelief-Regular.ttf);
+}
 
 .app {
   display: flex;
@@ -127,13 +131,27 @@
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
   background-color: black;
-  font-family: "Brush Script MT", cursive;
+  font-family: ComicRelief-Regular;
   color: white;
   text-align: center;
   padding: 10px;
 }
+footer img {
+  height: 50px;
+  margin: 10px;
+}
 
+@media (max-width: 950px) {
+  footer {
+    gap: 0px;
+    flex-direction: column-reverse;
+  }
+}
 @media (max-width: 830px) {
   /*Nav bar collapsed to the menu button*/
   .textLinkContainer{
@@ -159,6 +177,11 @@ footer {
     transition: all 0.2s ease;
   }
   .mobileNavLinks a:hover {
+    background: white;
+    border-color: white;
+    color: black;
+  }
+  .mobileNavLinks .active {
     background: white;
     border-color: white;
     color: black;
