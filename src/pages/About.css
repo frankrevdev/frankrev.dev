@@ -24,7 +24,7 @@
     transform: skewX(-30deg);
     position: absolute;
     top: 25px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 .titleContainer:hover {
     transform: scale(1.1) skewX(-30deg);
@@ -64,45 +64,50 @@
     justify-content: center;
     transform: skew(30deg);
     position: relative;
+    transition: font-size 0.3s ease;
 }
 .content-title {
     transition: opacity 0.3s ease;
 }
-.title-mid, .title-small, .title-tiny {
+.me-title-mid, .me-title-small, .me-title-tiny,
+.skill-title-mid {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
 }
-.title-full {
+.me-title-full,
+.skill-title-full {
     position: relative;
     opacity: 1;
 }
 /* <= 975px */
 @media (max-width: 975px) {
-    .title-full {
+    .me-title-full,
+    .skill-title-full {
         opacity: 0;
     }
-    .title-mid {
+    .me-title-mid,
+    .skill-title-mid {
         opacity: 1;
     }
 }
 /* <= 390px */
 @media (max-width: 390px) {
-    .title-mid {
+    .me-title-mid {
         opacity: 0;
     }
-    .title-small {
+    .me-title-small {
         opacity: 1;
     }
 }
 /* <= 190px */
 @media (max-width: 190px) {
-    .title-small {
+    .me-title-small {
         opacity: 0;
     }
-    .title-tiny {
+    .me-title-tiny {
         opacity: 1;
     }
 }
@@ -125,6 +130,7 @@
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
+    transition: width 0.3s ease;
 }
 .contentText {
     border-radius: 20px;
@@ -151,7 +157,6 @@
 @media (max-width: 1400px) {
     .meContent {
         flex-direction: column-reverse;
-        width: 70%;
     }
     .contentText {
         width: 90%;
@@ -177,14 +182,14 @@
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
-    transition: 0.25s ease;
+    transition: width 0.3s ease;
 }
 .skillCard {
     background: rgba(0, 0, 0, 0.4);
     border: var(--skill-card-border);
     border-radius: 10px;
     padding: 10px;
-    font-family: "Brush Script MT", cursive;
+    font-family: ComicRelief-Regular;
     text-align: center;
     transition: 0.25s ease;
     cursor: pointer;
@@ -215,5 +220,20 @@
     .skillCard {
         flex: 0 1 45%;
         width: auto;
+    }
+}
+@media (max-width: 768px) {
+    .meContent {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .skillsContent {
+        width: 100%;
+        border-radius: 0px;
+    }
+}
+@media (max-width: 570px) {
+    .titleContainer {
+        width: 90%;
     }
 }

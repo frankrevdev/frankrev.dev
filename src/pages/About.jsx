@@ -126,10 +126,10 @@ export default function About({ darkMode }) {
                 <div className="titleBar"></div>
                 <div className="titleContainer">
                     <div className="titleContent">
-                        <span className="content-title title-full">Me, Myself and I</span>
-                        <span className="content-title title-mid">Myself</span>
-                        <span className="content-title title-small">Me</span>
-                        <span className="content-title title-tiny">I</span>
+                        <span className="content-title me-title-full">Me, Myself and I</span>
+                        <span className="content-title me-title-mid">Myself</span>
+                        <span className="content-title me-title-small">Me</span>
+                        <span className="content-title me-title-tiny">I</span>
                     </div>
                 </div>
                 <div className="meContent">
@@ -148,11 +148,8 @@ export default function About({ darkMode }) {
                 <div className="titleBar"></div>
                 <div className="titleContainer">
                     <div className="titleContent">
-                        <span className="content-title title-full">Technical Skills</span>
-                        <span className="content-title title-mid">Skills</span>
-                        <span className="content-title title-small">
-                            <img src={skill_icon} className="skill-icon" alt="Skills" />
-                        </span>
+                        <span className="content-title skill-title-full">Technical Skills</span>
+                        <span className="content-title skill-title-mid">Skills</span>
                     </div>
                 </div>
                 <div className="skillsContent">

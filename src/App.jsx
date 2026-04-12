@@ -16,6 +16,7 @@ import Games from "./pages/Games";
 import Home from "./pages/Home";
 import Music from "./pages/Music";
 import Works from "./pages/Works";
+import Contact from "./pages/Contact";
 
 function App() {
 
@@ -90,14 +91,19 @@ function App() {
                 <li>
                   <NavLink to="/works" className={({ isActive }) => isActive ? "active" : ""}>Works</NavLink>
                 </li>
+                {/*
                 <li>
                   <NavLink to="/games" className={({ isActive }) => isActive ? "active" : ""}>Games</NavLink>
                 </li>
                 <li>
                   <NavLink to="/music" className={({ isActive }) => isActive ? "active" : ""}>Music</NavLink>
                 </li>
+                */}
                 <li>
                   <NavLink to="/blogs" className={({ isActive }) => isActive ? "active" : ""}>Blogs</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>Contact</NavLink>
                 </li>
               </ul>
             </nav>
@@ -109,9 +115,12 @@ function App() {
                 <div className="mobileNavLinks">
                   <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About</NavLink>
                   <NavLink to="/works" className={({ isActive }) => isActive ? "active" : ""}>Works</NavLink>
+                  {/*
                   <NavLink to="/games" className={({ isActive }) => isActive ? "active" : ""}>Games</NavLink>
                   <NavLink to="/music" className={({ isActive }) => isActive ? "active" : ""}>Music</NavLink>
+                  */}
                   <NavLink to="/blogs" className={({ isActive }) => isActive ? "active" : ""}>Blogs</NavLink>
+                  <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>Contact</NavLink>
                 </div>
                 <div className="dropdownDivider"></div>
                 <button onClick={toggleDarkMode}>
@@ -134,6 +143,7 @@ function App() {
           <Route path="/games" element={<Games/>} />
           <Route path="/music" element={<Music/>} />
           <Route path="/blogs" element={<Blogs/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
       </main>
 

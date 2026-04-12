@@ -1,0 +1,107 @@
+.gamesAssetsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.game_assets_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: auto;
+    background-color: rgba(200, 200, 200, 0.5);
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    gap: 10px
+}
+
+.musicContentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.musicContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: auto;
+    background-color: rgba(200, 200, 200, 0.5);
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    gap: 10px;
+    transition: display 0.3s ease;
+}
+
+iframe {
+    display: flex;
+}
+
+.games-title-mid,
+.music-title-mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.games-title-full,
+.music-title-full {
+    position: relative;
+    opacity: 1;
+}
+
+.game-icon,
+.music-icon {
+    width: 50%;
+    margin-top: 18%;
+}
+
+@media (max-width: 1080px) {
+    .titleContent {
+        font-size: 40px;
+    }
+}
+@media (max-width: 900px) {
+    .game_assets_content {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .musicContent {
+        width: 100%;
+        border-radius: 0px;
+    }
+}
+@media (max-width: 768px) {
+    .games-title-full {
+        opacity: 0;
+    }
+    .games-title-mid {
+        opacity: 1;
+    }
+    .musicContent {
+        display: grid;
+    }
+}
+@media (max-width: 580px) {
+    iframe {
+        width: auto;
+    }
+}
+@media (max-width: 330px) {
+    .music-title-full {
+        opacity: 0;
+    }
+    .music-title-mid {
+        opacity: 1;
+    }
+}
