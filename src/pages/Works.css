@@ -17,7 +17,8 @@
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px;
-    gap: 10px
+    gap: 10px;
+    transition: width 0.3s ease;
 }
 
 .musicContentContainer {
@@ -39,7 +40,7 @@
     margin-bottom: 20px;
     padding: 10px;
     gap: 10px;
-    transition: display 0.3s ease;
+    transition: width 0.3s ease;
 }
 
 iframe {

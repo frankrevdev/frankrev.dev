@@ -154,6 +154,13 @@
     position: relative;
     margin: 20px;
 }
+.loading {
+    font-family: Knewave-Regular;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    color: var(--text-color);
+}
 @media (max-width: 1400px) {
     .meContent {
         flex-direction: column-reverse;
@@ -234,6 +241,6 @@
 }
 @media (max-width: 570px) {
     .titleContainer {
-        width: 90%;
+        width: 80%;
     }
 }
