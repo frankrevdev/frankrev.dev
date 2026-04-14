@@ -17,10 +17,10 @@ export default function Works() {
                     </div>
                 </div>
                 <div className="game_assets_content">
-                    <iframe  width="552" height="167" frameborder="0" src="https://itch.io/embed/4364496">
+                    <iframe  width="552" height="167" frameBorder="0" src="https://itch.io/embed/4364496">
                         <a href="https://frankrevdev.itch.io/puzzledepizzle-v01">PuzzleDePizzle v0.1 by Franco Padua</a>
                     </iframe>
-                    <iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/3754499">
+                    <iframe width="552" height="167" frameBorder="0" src="https://itch.io/embed/3754499">
                         <a href="https://frankrevdev.itch.io/actionemotional-bgm-1">[FREE] Action/Emotional 8/16/24/32 Bar Loop BGM #1 by Franco Padua</a>
                     </iframe>
                 </div>
@@ -36,12 +36,12 @@ export default function Works() {
                 </div>
                 <div className="musicContent">
                     <iframe src="https://open.spotify.com/embed/artist/3hD6jHhI80jHqBKcDHPqN4"
-                        width="300" height="380" frameborder="0"
+                        width="300" height="380" frameBorder="0"
                         allowtransparency="true" allow="encrypted-media">
                     </iframe>
 
                     <iframe src="https://open.spotify.com/embed/artist/74MbgZuZe4oshpldo6aRRL"
-                        width="300" height="380" frameborder="0"
+                        width="300" height="380" frameBorder="0"
                         allowtransparency="true" allow="encrypted-media">
                     </iframe>
                 </div>
