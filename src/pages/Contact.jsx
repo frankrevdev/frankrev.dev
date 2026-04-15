@@ -1,6 +1,9 @@
 import './Contact.css';
 
-// Links
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
+// LINKS
 const links = [
     {
         key: "insta",
@@ -43,6 +46,29 @@ function LinkCard({ name, src, url }) {
 }
 
 export default function Contact() {
+
+    // MESSAGE FORM
+    const form = useRef();
+    const [status, setStatus] = useState("");
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setStatus("Sending...");
+        emailjs.sendForm(
+            "service_h4mnfze",
+            "template_5rrm07t",
+            form.current,
+            "uQCFgeqJipqNBAK6K"
+        ).then(
+            () => {
+                setStatus("Sent!");
+                form.current.reset();
+            },
+            () => {
+                setStatus("Error!");
+            }
+        );
+    };
+
     return (
         <>
             <title>frankrevdev | contact</title>
@@ -63,6 +89,58 @@ export default function Contact() {
                             url={mlink.url}
                         />
                     ))}
+                </div>
+            </div>
+
+            <div className="messageMeContainer">
+                <div className="titleBar"></div>
+                <div className="titleContainer">
+                    <div className="titleContent">
+                        <span className="content-title message-title-full">Message Me</span>
+                    </div>
+                </div>
+
+                <div className="writeMessageContent">
+                    <form ref={form} onSubmit={sendEmail} className="contactForm">
+                        <div className="formTopContent">
+                            <div className="leftInput">
+                                <input
+                                    type="email"
+                                    name="user_email"
+                                    placeholder="Your Email"
+                                    className="emailInput"
+                                    required
+                                />
+                                <input 
+                                    type="text"
+                                    name="subject"
+                                    placeholder="Subject"
+                                    className="subjectInput"
+                                    required
+                                />
+                            </div>
+                            <div className="rightInput">
+                                <textarea 
+                                    name="message"
+                                    placeholder="Your Message..."
+                                    required
+                                />
+                            </div>
+
+                            <input 
+                                type="hidden"
+                                name="time"
+                                value={new Date().toLocaleString()}
+                            />
+                        </div>
+
+                        <div className="formBottomContent">
+                            <button type="submit" disabled={status === "Sending..."} className="submitButton">
+                                {status === "Sending..." ? "Sending..." : "Send Message"}
+                            </button>
+                            {status && <p className="statusResult">{status}</p>}
+                        </div>
+                    </form>
                 </div>
             </div>
         </>
