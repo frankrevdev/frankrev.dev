@@ -15,6 +15,7 @@ html, body, #root {
 :root {
     --bg-color: white;
     --text-color: black;
+    --text-link-color: #1da1f2;
     --text-color-inner: white;
     --text-color-stroke: black;
     --title-bar-bg: black;
@@ -27,6 +28,7 @@ html, body, #root {
 body.dark {
     --bg-color: #121212;
     --text-color: white;
+    --text-link-color: #6ec7ff;
     --text-color-inner: black;
     --text-color-stroke: white;
     --title-bar-bg: rgb(138, 138, 138);

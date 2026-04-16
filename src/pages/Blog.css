@@ -1,0 +1,93 @@
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blog-post.active {
+    border: 2px solid #00ffff;
+    background: rgba(0, 255, 255, 0.05);
+}
+
+.postContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(200, 200, 200, 0.5);
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.postContainer .blogTitle {
+    display: flex;
+    text-align: center;
+    font-family: Knewave-Regular;
+    font-size: 30px;
+    color: var(--text-color)
+}
+.postContainer .blogDate {
+    display: flex;
+    width: 100%;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+.postContainer .blogDescription {
+    display: flex;
+    padding: 20px;
+    padding-top: 0px;
+    text-indent: 2em;
+}
+.postContainer .blogImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.postContainer p {
+    font-family: ComicRelief-Regular;
+    font-size: 20px;
+    white-space: pre-line;
+    color: var(--text-color)
+}
+.externalLinks {
+    color: var(--text-link-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+.externalLinks:hover {
+    text-decoration: underline;
+}
+.postContainer button {
+    position: absolute;
+    top: 0%;
+    left: 85%;
+    transform: translate(50%, 50%);
+    transition: transform 0.2s ease;
+    background: none;
+    padding: 0;
+}
+.postContainer button:active {
+    transform: translate(50%, 50%) scale(0.9);
+}
+.postContainer button img {
+    height: 50px;
+    vertical-align: middle;
+}
+.postContainer img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 280px) {
+    .postContainer .blogDate {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+}
