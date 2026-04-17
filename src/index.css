@@ -20,6 +20,8 @@ html, body, #root {
     --text-color-stroke: black;
     --title-bar-bg: black;
 
+    --selection-bg-color: rgba(0, 0, 0, 0.25);
+
     --skill-card-border: 1px solid white;
     --skill-card-border-glow: black;
     --skill-card-shadow-glow: black;
@@ -32,6 +34,8 @@ body.dark {
     --text-color-inner: black;
     --text-color-stroke: white;
     --title-bar-bg: rgb(138, 138, 138);
+
+    --selection-bg-color: rgba(158, 158, 158, 0.25);
 
     --skill-card-border: 1px solid black;
     --skill-card-border-glow: white;

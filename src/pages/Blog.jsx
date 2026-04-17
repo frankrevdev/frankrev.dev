@@ -25,7 +25,7 @@ const posts = [
             IranvsIsraelandUSA: "https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war#3_March",
             bloodmoon: "https://www.timeanddate.com/eclipse/lunar/2026-march-3"
         },
-        image: "images/p/blog/1-blood-day.jpg"
+        image: "/images/p/blog/1-blood-day.jpg"
     }
 ];
 

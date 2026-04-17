@@ -5,7 +5,8 @@
 }
 .blog-post.active {
     border: 2px solid #929292;
-    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    background: var(--selection-bg-color);
 }
 
 .postContainer {
@@ -63,15 +64,16 @@
 }
 .postContainer button {
     position: absolute;
-    top: 0%;
-    left: 85%;
-    transform: translate(50%, 50%);
+    top: 0%;                            /* This is X */
+    right: 0%;                         /* This is Y */ 
+    transform: translate(-50%, 50%);     /* This is X and Y */
     transition: transform 0.2s ease;
     background: none;
+    border: none;
     padding: 0;
 }
 .postContainer button:active {
-    transform: translate(50%, 50%) scale(0.9);
+    transform: translate(-50%, 50%) scale(0.9);
 }
 .postContainer button img {
     height: 50px;
@@ -82,6 +84,11 @@
     height: auto;
 }
 
+@media (max-width: 768px) {
+    .postContainer .blogTitle {
+        margin-top: 50px;
+    }
+}
 @media (max-width: 280px) {
     .postContainer .blogDate {
         text-align: center;
