@@ -126,9 +126,6 @@ function App() {
                 <button onClick={toggleDarkMode}>
                   {darkMode ? "Light Mode" : "Dark Mode"}
                 </button>
-                <button onClick={handleExit}>
-                  Exit
-                </button>
               </div>
             )}
           </div>
@@ -148,7 +145,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>Copyright &copy; 2026 Franco Padua. All rights reserved.</p>
+        <p>Copyright &copy; {new Date().getFullYear()} Franco Padua. All rights reserved.</p>
         <div className="footerLinks">
           <a href="https://www.facebook.com/frankrev.dev" target="_blank">
             <img src={fb} alt="Facebook" />

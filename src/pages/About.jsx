@@ -11,46 +11,102 @@ const framePaths = Array.from({ length: frameCount }, (_, i) =>
 );
 
 // Skills
-const skillModules = import.meta.glob('../assets/Images/p/about/icons/skills/*.{png,jpg,svg}', {
-    eager: true,
-    import: 'default'
-});
-const skillOrder = [
-    "cpp",
-    "raylib",
-    "html",
-    "css",
-    "js",
-    "vim",
-    "vs"
+const software = [
+    {
+        key: "cpp",
+        name: "C++",
+        src: new URL("../assets/Images/p/about/icons/skills/software/cpp.svg", import.meta.url).href
+    },
+    {
+        key: "raylib",
+        name: "Raylib",
+        src: new URL("../assets/Images/p/about/icons/skills/software/raylib.png", import.meta.url).href
+    },
+    {
+        key: "html",
+        name: "HTML",
+        src: new URL("../assets/Images/p/about/icons/skills/software/html.svg", import.meta.url).href
+    },
+    {
+        key: "css",
+        name: "CSS",
+        src: new URL("../assets/Images/p/about/icons/skills/software/css.svg", import.meta.url).href
+    },
+    {
+        key: "js",
+        name: "JavaScript",
+        src: new URL("../assets/Images/p/about/icons/skills/software/js.svg", import.meta.url).href
+    },
+    {
+        key: "git",
+        name: "Git",
+        src: new URL("../assets/Images/p/about/icons/skills/software/git.svg", import.meta.url).href
+    },
+    {
+        key: "vim",
+        name: "Vim-motions",
+        src: new URL("../assets/Images/p/about/icons/skills/software/vim.svg", import.meta.url).href
+    },
+    {
+        key: "vs",
+        name: "Visual Studio",
+        src: new URL("../assets/Images/p/about/icons/skills/software/vs.svg", import.meta.url).href
+    },
+    {
+        key: "fl",
+        name: "FL Studio",
+        src: new URL("../assets/Images/p/about/icons/skills/software/fl.svg", import.meta.url).href
+    },
+    {
+        key: "reap",
+        name: "Reaper",
+        src: new URL("../assets/Images/p/about/icons/skills/software/reap.svg", import.meta.url).href
+    },
+    {
+        key: "ink",
+        name: "Inkscape",
+        src: new URL("../assets/Images/p/about/icons/skills/software/ink.svg", import.meta.url).href
+    },
+    {
+        key: "word",
+        name: "Word",
+        src: new URL("../assets/Images/p/about/icons/skills/software/word.svg", import.meta.url).href
+    },
+    {
+        key: "excel",
+        name: "Excel",
+        src: new URL("../assets/Images/p/about/icons/skills/software/excel.svg", import.meta.url).href
+    }
 ];
-const skills = Object.entries(skillModules).map(([Path2D, src]) => {
-    const key = Path2D.split('/').pop().split('.')[0];
-    const skillNames = {
-        cpp: "C++",
-        css: "CSS",
-        html: "HTML",
-        js: "JavaScript",
-        raylib: "Raylib",
-        vim: "Vim",
-        vs: "Visual Studio"
-    };
-
-    return {
-        key,
-        name: skillNames[key] || key.toUpperCase(),
-        src
-    };
-}).sort((a, b) => {
-    const safeA = skillOrder.indexOf(a.key);
-    const safeB = skillOrder.indexOf(b.key);
-    return (safeA === -1 ? Infinity : safeA) -
-            (safeB === -1 ? Infinity : safeB);
-});
+const hardware = [
+    {
+        key: "setup",
+        name: "Basic Computer System Installation and Setup",
+        src: new URL("../assets/Images/p/about/icons/skills/hardware/setup.svg", import.meta.url).href
+    },
+    {
+        key: "config",
+        name: "Basic Computer Network Configuration",
+        src: new URL("../assets/Images/p/about/icons/skills/hardware/configuration.svg", import.meta.url).href
+    },
+    {
+        key: "proto",
+        name: "Basic Electronic Prototyping",
+        src: new URL("../assets/Images/p/about/icons/skills/hardware/prototype.svg", import.meta.url).href
+    }
+];
 
 function SkillCard({ name, src }) {
     return (
         <div className="skillCard">
+            <img src={src} alt={name} />
+            <span>{name}</span>
+        </div>
+    );
+}
+function HardwareSkill({ name, src }) {
+    return (
+        <div className="hardwareSkill">
             <img src={src} alt={name} />
             <span>{name}</span>
         </div>
@@ -135,9 +191,9 @@ export default function About({ darkMode }) {
                 <div className="meContent">
                     <div className="contentText">
                         <p>Hello! My name is <span className="highlight">Vince Franco Padua</span>, I'm a passionate developer that likes technology. 
-                            I have a wide range of interests, but my main focus is on software development, game development and music production.</p>
-                        <p>In my free time, I enjoy playing video games, listening to music and spending myself on the internet exploring new technologies.</p>
-                        <p>Feel free to reach out to me if you want to collaborate on a project or just want to chat about technology, gaming or music!</p>
+                            I have a wide range of interests, but my main focus is on computer systems, software development, and digital creativity.</p>
+                        <p>In my free time, I enjoy listening to music and spending myself on the internet exploring new technologies.</p>
+                        <p>Feel free to reach out to me if you want to collaborate on a project and be part of your team or just chat. :)</p>
                     </div>
                     <img src={framePaths[frameIndex]} className="me" alt="Frank"/>
                 </div>
@@ -153,9 +209,19 @@ export default function About({ darkMode }) {
                     </div>
                 </div>
                 <div className="skillsContent">
-                    {skills.map((skill, index) => (
-                        <SkillCard key={skill.key} {...skill} />
-                    ))}
+                    <div className="subTitle">Software Tools</div>
+                    <div className="toolSkills">
+                        {/*<SkillCard {...software[0]} />*/}
+                        {software.map((skill) => (
+                            <SkillCard key={skill.key} name={skill.name} src={skill.src} />
+                        ))}
+                    </div>
+                    <div className="subTitle">Hardware Competencies</div>
+                    <div className="hardwareComp">
+                        {hardware.map((hkill) => (
+                            <HardwareSkill key={hkill.key} name={hkill.name} src={hkill.src} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </>

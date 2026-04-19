@@ -179,16 +179,36 @@
 }
 .skillsContent {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 15px;
-    padding: 20px;
-    width: auto;
+    width: 50%;
     background-color: rgba(200, 200, 200, 0.5);
     border: 2px solid black;
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    padding-bottom: 20px;
+}
+.subTitle {
+    font-family: Knewave-Regular;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+}
+.toolSkills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    width: 100%;
     transition: width 0.3s ease;
 }
 .skillCard {
@@ -200,8 +220,41 @@
     text-align: center;
     transition: 0.25s ease;
     cursor: pointer;
-    width: calc((100% - 60px) / 6);
+    width: 80%;
     max-width: 140px;
+}
+.hardwareComp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    width: 100%;
+    transition: width 0.3s ease;
+}
+.hardwareSkill{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--hardware-skill-bg-color);
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+    font-family: ComicRelief-Regular;
+    text-align: center;
+    transition: 0.25s ease;
+    cursor: pointer;
+    max-width: 200px;
+}
+.hardwareSkill img {
+    height: 150px;
+    transition: filter 0.3s ease;
+    filter: var(--image-invert-color);
+}
+.hardwareSkill span {
+    display: block;
+    margin-top: 8px;
+    font-size: 18px;
+    color: var(--text-color);
 }
 .skillCard img {
     width: 70px;
@@ -214,7 +267,8 @@
     font-size: 20px;
     color: white;
 }
-.skillCard:hover {
+.skillCard:hover,
+.hardwareSkill:hover {
     transform: translateY(-5px) scale(1.05);
     border-color: var(--skill-card-border-glow);
     box-shadow: 0 0 15px var(--skill-card-shadow-glow);
@@ -222,12 +276,6 @@
 .skill-icon {
     width: 50%;
     margin-top: 18%;
-}
-@media (max-width: 900px) {
-    .skillCard {
-        flex: 0 1 45%;
-        width: auto;
-    }
 }
 @media (max-width: 768px) {
     .meContent {

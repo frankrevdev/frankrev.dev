@@ -25,6 +25,8 @@ html, body, #root {
     --skill-card-border: 1px solid white;
     --skill-card-border-glow: black;
     --skill-card-shadow-glow: black;
+
+    --image-invert-color: invert(0%);
 }
 /* Enabled */
 body.dark {
@@ -40,6 +42,9 @@ body.dark {
     --skill-card-border: 1px solid black;
     --skill-card-border-glow: white;
     --skill-card-shadow-glow: #ccc;
+    --hardware-skill-bg-color: rgba(0, 0, 0, 0.4);
+
+    --image-invert-color: invert(95%);
 }
 
 /* Containers and contents that are affected */
