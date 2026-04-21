@@ -16,9 +16,21 @@
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 20px;
     gap: 10px;
     transition: width 0.3s ease;
+}
+.itch-embed-wrapper {
+    position: relative;
+    width: 80%;
+    height: 167px;
+    overflow: hidden;
+}
+.itch-embed-wrapper iframe {
+    position: absolute;
+    will-change: auto;
+    inset: 0;
+    width: 100%;
 }
 
 .musicContentContainer {
@@ -44,7 +56,9 @@
 }
 
 iframe {
-    display: flex;
+    overflow-clip-margin: content-box !important;
+    overflow: clip !important;
+    border-style: inset;
 }
 
 .games-title-mid,
