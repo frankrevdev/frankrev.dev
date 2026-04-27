@@ -22,6 +22,7 @@
     padding: 20px;
     overflow: hidden;
     position: relative;
+    transition: width 0.3s ease;
 }
 .postContainer .blogTitle {
     display: flex;
@@ -72,10 +73,15 @@
     border: none;
     padding: 0;
 }
+.postContainer button:hover {
+    cursor: pointer;
+}
 .postContainer button:active {
     transform: translate(-50%, 50%) scale(0.9);
 }
 .postContainer button img {
+    transition: filter 0.3s ease;
+    filter: var(--image-invert-color);
     height: 50px;
     vertical-align: middle;
 }
@@ -84,7 +90,12 @@
     height: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+    .postContainer {
+        width: 100%;
+    }
+}
+@media (max-width: 345px) {
     .postContainer .blogTitle {
         margin-top: 50px;
     }

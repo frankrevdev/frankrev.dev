@@ -1,7 +1,32 @@
+.mainContent {
+    margin-top: 80px;
+}
+.dividerBar1 {
+    background-color: var(--black-bar);
+    height: 50px;
+    width: 100%;
+    position: fixed;
+}
+.dividerBar2 {
+    background-color: var(--gray-bar);
+    height: 50px;
+    width: 100%;
+}
 .intro {
-    font-family: Knewave-Regular;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
     font-size: 50px;
-    color: white;
-    -webkit-text-stroke: 2px black;
-    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.intro h1 {
+    transition: all 0.3s ease;
+    font-family: Knewave-Regular;
+    color: var(--text-color-inner);
+    -webkit-text-stroke: 2px var(--text-color-stroke);
+}
+.intro h1 .smiley {
+    -webkit-text-stroke-width: 5px;
 }

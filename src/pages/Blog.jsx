@@ -8,24 +8,10 @@ import copyLink from '/images/p/blog/copy-link.svg';
 const posts = [
     {
         id: "blog2",
-        title: "I don't know yet",
-        date: "April 16, 2026",
-        description:
-            `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`
-    },
-    {
-        id: "blog1",
         title: "My First Blog",
-        date: "March 3, 2026",
-        description: 
-            `Today feels heavier and bloodier than ever. Hopelessness, Mental fractures, Heartbreak, and Chaos. Some opportunities arrive quietly, mine came with noise inside my head. Prefer to stare at my computer screen see if I can find my life through it. Happy blood day to me. 
-
-            #IranvsIsraelandUSA #bloodmoon #birthday`,
-        links: {
-            IranvsIsraelandUSA: "https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war#3_March",
-            bloodmoon: "https://www.timeanddate.com/eclipse/lunar/2026-march-3"
-        },
-        image: "/images/p/blog/1-blood-day.jpg"
+        date: "April 21, 2026",
+        description:
+            `This is my first blog post! I never thougt I would be achieving this milestone and I am so glad about it. At first, I thought it was hard and impossible and I almost gave up. But then I realized that I just had to take it one step at a time and not worry about the end result. All I needed was to believe in myself and keep pushing forward.`
     }
 ];
 
@@ -77,9 +63,9 @@ export default function Blogs() {
         }
     }, []);
 
-    document.title = "frankrevdev | blogs";
     return (
         <>
+            <title>frankrevdev | blogs</title>
             {posts.map(post => (
                 <div id={post.id} className={`blog-post ${activeId === post.id ? "active" : ""}`} key={post.id}>
                     <div className="titleBar"></div>

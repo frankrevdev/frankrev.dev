@@ -3,20 +3,6 @@ import './Works.css';
 import game_icon from "../assets/Images/p/works/icons/game-icon.png"
 import music_icon from "../assets/Images/p/works/icons/music-icon.png"
 
-function ItchIframe({width="552", height="167", src}) {
-    return (
-        <div className="itch-embed-wrapper">
-            <iframe
-                src={src}
-                loading="lazy"
-                frameBorder="0"
-                scrolling="no"
-            >
-            </iframe>
-        </div>
-    );
-}
-
 export default function Works() {
     return (
         <>
@@ -53,15 +39,19 @@ export default function Works() {
                     </div>
                 </div>
                 <div className="musicContent">
-                    <iframe src="https://open.spotify.com/embed/artist/3hD6jHhI80jHqBKcDHPqN4"
-                        width="500" height="380" frameBorder="0"
-                        allowtransparency="true" allow="encrypted-media">
-                    </iframe>
+                    <div className="music-embed-wrapper">
+                        <iframe src="https://open.spotify.com/embed/artist/3hD6jHhI80jHqBKcDHPqN4"
+                            width="100%" height="380" frameBorder="0"
+                            allowtransparency="true" allow="encrypted-media">
+                        </iframe>
+                    </div>
 
-                    <iframe src="https://open.spotify.com/embed/artist/74MbgZuZe4oshpldo6aRRL"
-                        width="500" height="380" frameBorder="0"
-                        allowtransparency="true" allow="encrypted-media">
-                    </iframe>
+                    <div className="music-embed-wrapper">
+                        <iframe src="https://open.spotify.com/embed/artist/74MbgZuZe4oshpldo6aRRL"
+                            width="100%" height="380" frameBorder="0"
+                            allowtransparency="true" allow="encrypted-media">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </>

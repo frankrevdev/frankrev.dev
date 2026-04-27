@@ -54,8 +54,16 @@
     gap: 10px;
     transition: width 0.3s ease;
 }
-
-iframe {
+.music-embed-wrapper {
+    position: relative;
+    width: 40%;
+    height: 380px;
+    overflow: hidden;
+}
+.music-embed-wrapper iframe {
+    position: absolute;
+    will-change: auto;
+    inset: 0;
     overflow-clip-margin: content-box !important;
     overflow: clip !important;
     border-style: inset;
@@ -104,15 +112,13 @@ iframe {
         opacity: 1;
     }
     .musicContent {
-        display: grid;
+        flex-direction: column;
+    }
+    .music-embed-wrapper {
+        width: 80%;
     }
 }
-@media (max-width: 580px) {
-    iframe {
-        width: auto;
-    }
-}
-@media (max-width: 330px) {
+@media (max-width: 369px) {
     .music-title-full {
         opacity: 0;
     }
