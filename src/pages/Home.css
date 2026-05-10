@@ -2,18 +2,14 @@
   margin-top: 80px;
 }
 
-.first-section {
-  min-height: 100vh;
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-}
 .background {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  inset: 0;
+  z-index: -1;
   pointer-events: none;
+  overflow: hidden;
 }
 .logo-wrapper {
   position: absolute;
@@ -35,15 +31,23 @@
   transform: scale(var(--scale)) rotate(var(--rotate));
 }
 .logo-svg.rotate {
-  animation: spin 10s linear infinite;
+  animation: spin var(--spin-duration, 10s) linear infinite;
 }
 @keyframes spin {
   from {
-    transform: translateY(0) scale(var(--scale)) rotate(0deg);
+    transform: scale(var(--scale)) rotate(0deg);
   }
   to {
-    transform: translateY(0) scale(var(--scale)) rotate(360deg);
+    transform: scale(var(--scale)) rotate(360deg);
   }
+}
+
+.first-section {
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  z-index: 0;
 }
 .intro {
   position: relative;
@@ -64,8 +68,67 @@
 .intro h1 .smiley {
   -webkit-text-stroke-width: 5px;
 }
+.gradientLineBreak1 {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background-image: linear-gradient(var(--bg-color), var(--opposite-of-bg-color));
+  bottom: 20px;
+  transition: --bg-color 0.3s ease, --text-color-stroke 0.3s ease;
+}
+.gradientLineBreak2 {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background-image: linear-gradient(var(--opposite-of-bg-color), var(--bg-color));
+  bottom: 0;
+  transition: --bg-color 0.3s ease, --text-color-stroke 0.3s ease;
+}
 
 .second-section {
+  position: relative;
   min-height: 100vh;
-  background-color: var(--background-color);
+  backdrop-filter: blur(10px);
+  align-items: center;
+}
+.secTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+.secTitle h1 {
+  font-family: Knewave-Regular;
+  color: var(--text-color-inner);
+  -webkit-text-stroke: 2px var(--text-color-stroke);
+}
+
+.third-section {
+  position: relative;
+  min-height: 83vh;
+  backdrop-filter: blur(10px);
+}
+.thirdSec-title-mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.thirdSec-title-full {
+  position: relative;
+  opacity: 1;
+}
+
+@media (max-width: 675px) {
+  .thirdSec-title-full {
+    opacity: 0;
+  }
+  .thirdSec-title-mid {
+    opacity: 1;
+  }
+}
+@media (max-width: 523px) {
+  .intro {
+    font-size: 30px;
+  }
 }

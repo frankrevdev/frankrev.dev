@@ -23,6 +23,8 @@ html, body, #root {
     --black-bar: black;
     --gray-bar: gray;
 
+    --opposite-of-bg-color: black;
+
     --selection-bg-color: rgba(0, 0, 0, 0.25);
 
     --skill-card-border: 1px solid white;
@@ -40,6 +42,8 @@ body.dark {
     --text-color-stroke: white;
     --title-bar-bg: rgb(138, 138, 138);
 
+    --opposite-of-bg-color: white;
+
     --selection-bg-color: rgba(158, 158, 158, 0.25);
 
     --skill-card-border: 1px solid black;
@@ -50,9 +54,11 @@ body.dark {
     --image-invert-color: invert(95%);
 }
 
-/* Containers and contents that are affected */
 body {
+    position: relative;
     background-color: var(--bg-color);
+    scrollbar-color: var(--opposite-of-bg-color) var(--bg-color);
+    z-index: 0;
 }
 .titleBar {
     background-color: var(--title-bar-bg);
