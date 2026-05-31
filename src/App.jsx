@@ -27,8 +27,8 @@ function App() {
       new window.FinisherHeader({
         count: 11,
         size: {
-          min: 1300,
-          max: 1500,
+          min: 500,
+          max: 900,
           pulse: 0
         },
         speed: {

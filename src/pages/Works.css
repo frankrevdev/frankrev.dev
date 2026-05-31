@@ -41,6 +41,7 @@
 }
 .musicContent {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 70%;
@@ -54,19 +55,25 @@
     gap: 10px;
     transition: width 0.3s ease;
 }
-.music-embed-wrapper {
-    position: relative;
-    width: 40%;
-    height: 380px;
+.artist {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 80%;
     overflow: hidden;
 }
-.music-embed-wrapper iframe {
-    position: absolute;
-    will-change: auto;
-    inset: 0;
-    overflow-clip-margin: content-box !important;
-    overflow: clip !important;
-    border-style: inset;
+.artist .name {
+    font-family: Knewave-Regular;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+}
+.playlistIframe {
+    padding: 10px;
+    max-height: 300px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .games-title-mid,
