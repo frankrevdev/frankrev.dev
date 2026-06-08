@@ -8,10 +8,87 @@ const works = [
     // Music Content
     {
         type: "music",
+        artist: "morTone",
+        title: "new path",
+        date: "June 28, 2025",
+        embedSrc: "https://open.spotify.com/embed/track/28z8uR9bStN54Ugk5cXDKH?utm_source=generator&theme=0"
+    },
+    {
+        type: "music",
         artist: "Morning Tune",
-        title: "Blooming",
-        date: "February 27, 2020",
-        embedSrc: "https://open.spotify.com/embed/track/23iz6yzdsV1kL9CnAGpkfn?utm_source=generator&theme=0"
+        title: "Family",
+        date: "June 28, 2022",
+        embedSrc: "https://open.spotify.com/embed/track/3QNXmZHuVjZ7AP7a3SttDE?utm_source=generator&theme=0"
+    },
+    {
+        type: "music",
+        artist: "Morning Tune",
+        title: "Childhood",
+        date: "June 28, 2022",
+        embedSrc: "https://open.spotify.com/embed/track/01ANWHaKaUbBHax6s9vXle?utm_source=generator&theme=0"
+    },
+    {
+        type: "music",
+        artist: "Morning Tune",
+        title: "Ace",
+        date: "November 21, 2021",
+        embedSrc: "https://open.spotify.com/embed/track/56hj4SDyL7eF4kdtWT4eeH?utm_source=generator&theme=0"
+    },
+    {
+        type: "music",
+        artist: "Morning Tune",
+        title: "Surface",
+        date: "February 14, 2021",
+        embedSrc: "https://open.spotify.com/embed/track/0NniAhs4tM8VRlA7DtQNV8?utm_source=generator&theme=0"
+    },
+    {
+        type: "music",
+        artist: "Morning Tune",
+        title: "Dicen",
+        date: "February 14, 2021",
+        embedSrc: "https://open.spotify.com/embed/track/44Fnw2i7shG8F0LltBsBVG?utm_source=generator&theme=0"
+    },
+    {
+        type: "music",
+        artist: "Morning Tune",
+        title: "New Paradise",
+        date: "February 14, 2021",
+        embedSrc: "https://open.spotify.com/embed/track/0rKsqCopZ6lGjd1brC9NMl?utm_source=generator&theme=0"
+    },
+    {
+        type: "music",
+        artist: "Morning Tune",
+        title: "Noon Forests",
+        date: "May 10, 2020",
+        embedSrc: "https://open.spotify.com/embed/track/417XTxCz3U6jShTZSlFKDr?utm_source=generator&theme=0"
+    },
+    {
+        type: "music",
+        artist: "Morning Tune",
+        title: "Falling",
+        date: "May 10, 2020",
+        embedSrc: "https://open.spotify.com/embed/track/3k0DFBppAhHE1ATuScFREh?utm_source=generator&theme=0"
+    },
+    {
+        type: "music",
+        artist: "Morning Tune",
+        title: "Modern Travel",
+        date: "May 10, 2020",
+        embedSrc: "https://open.spotify.com/embed/track/4qNnq9u1h4Az3nwUWqzxL4?utm_source=generator&theme=0"
+    },
+    {
+        type: "music",
+        artist: "Morning Tune",
+        title: "Opaque",
+        date: "May 10, 2020",
+        embedSrc: "https://open.spotify.com/embed/track/6dC1A9dofvnvaE31Tg8w6p?utm_source=generator&theme=0"
+    },
+    {
+        type: "music",
+        artist: "Morning Tune",
+        title: "Tropicality",
+        date: "April 8, 2020",
+        embedSrc: "https://open.spotify.com/embed/track/58JeQtA6tNbKA5Lz7mbQwA?utm_source=generator&theme=0"
     },
     {
         type: "music",
@@ -19,6 +96,20 @@ const works = [
         title: "Metro",
         date: "February 27, 2020",
         embedSrc: "https://open.spotify.com/embed/track/4jnUu1M3XW09b9XFv4C7Bc?utm_source=generator&theme=0"
+    },
+    {
+        type: "music",
+        artist: "Morning Tune",
+        title: "Glowing Dynasty",
+        date: "February 27, 2020",
+        embedSrc: "https://open.spotify.com/embed/track/5aDxPesKDpClFZtRCK9QH1?utm_source=generator&theme=0"
+    },
+    {
+        type: "music",
+        artist: "Morning Tune",
+        title: "Blooming",
+        date: "February 27, 2020",
+        embedSrc: "https://open.spotify.com/embed/track/23iz6yzdsV1kL9CnAGpkfn?utm_source=generator&theme=0"
     },
     {
         type: "music",
