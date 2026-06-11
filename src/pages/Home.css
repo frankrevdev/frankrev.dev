@@ -87,9 +87,10 @@
 
 .second-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 83vh;
   backdrop-filter: blur(10px);
   align-items: center;
+  justify-content: center;
 }
 .secTitle {
   display: flex;
@@ -100,6 +101,49 @@
   font-family: Knewave-Regular;
   color: var(--text-color-inner);
   -webkit-text-stroke: 2px var(--text-color-stroke);
+}
+.secContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+  width: 80%;
+}
+.servCard {
+  width: 600px;
+  height: 300px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--text-color-stroke);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+.servCard:hover {
+  transform: translateY(-5px) scale(1.05);
+  border-color: var(--skill-card-border-glow);
+  box-shadow: 0 0 15px var(--skill-card-shadow-glow);
+}
+.servImage {
+  height: 40%;
+  overflow: hidden;
+  border-radius: 7px 7px 0 0;
+}
+.servImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.servText {
+  font-family: Knewave-Regular;
+  font-size: 20px;
+  padding: 20px;
+  color: var(--text-color);
+}
+.servText p {
+  font-family: ComicRelief-Regular;
+  text-indent: 50px;
 }
 
 .third-section {

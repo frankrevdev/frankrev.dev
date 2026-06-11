@@ -68,7 +68,8 @@ export default function Blogs() {
             <title>frankrevdev | blogs</title>
             {posts.map(post => (
                 <div id={post.id} className={`blog-post ${activeId === post.id ? "active" : ""}`} key={post.id}>
-                    <div className="titleBar"></div>
+                <div className="gradientLineBreak3"></div>
+                <div className="gradientLineBreak4"></div>
                     <div className="postContainer">
                         <div className="blogTitle">{post.title}</div>
                         <button

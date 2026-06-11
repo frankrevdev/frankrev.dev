@@ -123,6 +123,17 @@ const works = [
 const sorted = (type) => works.filter(w => w.type === type || (type === "itch" && (w.type === "game" || w.type === "asset"))).sort((a, b) => new Date(b.date) - new Date(a.date));
 
 
+function ItchIframe({ src }) {
+    return (
+        <iframe
+            data-testid="itch-iframe"
+            width="70%"
+            height="167"
+            frameBorder="0"
+            src={src}
+        />
+    )
+}
 function SpotifyIframe({ src }) {
     return (
         <iframe
@@ -159,13 +170,11 @@ export default function Works() {
                 {/*I'll fix this later*/}
                 <div className="game_assets_content">
                     <div className="itch-embed-wrapper">
-                        <iframe width="70%" height="167" frameBorder="0" scrolling="no" src="https://itch.io/embed/4364496">
-                            <a href="https://frankrevdev.itch.io/puzzledepizzle-v01">PuzzleDePizzle v0.1 by Franco Padua</a>
+                        <iframe width="70%" height="167" frameBorder="0" src="https://itch.io/embed/4364496">
                         </iframe>
                     </div>
                     <div className="itch-embed-wrapper">
                         <iframe width="70%" height="167" frameBorder="0" src="https://itch.io/embed/3754499">
-                            <a href="https://frankrevdev.itch.io/actionemotional-bgm-1">[FREE] Action/Emotional 8/16/24/32 Bar Loop BGM #1 by Franco Padua</a>
                         </iframe>
                     </div>
                 </div>

@@ -58,12 +58,43 @@ export default function Home() {
                     <div className="titleBar"></div>
                     <div className="titleContainer">
                         <div className="titleContent">
-                            <span className="content-title secSec-title-full">What I Bring</span>
+                            <span className="content-title secSec-title-full">Services</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="secContent">
+                    <div className="servCard">
+                        <div className="servImage">
+                            <img src="/images/prog.jpg" alt="" />
+                        </div>
+                        <div className="servText">
+                            <div className="servTitle">Programming</div>
+                            <p>Developing functional and scalable software programs like games and applications.</p>
+                        </div>
+                    </div>
+                    <div className="servCard">
+                        <div className="servImage">
+                            <img src="/images/media.jpg" alt="" />
+                        </div>
+                        <div className="servText">
+                            <div className="servTitle">Media & Creativity</div>
+                            <p>Making engaging content and visuals like music, photos, and videos to captivate audiences.</p>
+                        </div>
+                    </div>
+                    <div className="servCard">
+                        <div className="servImage">
+                            <img src="/images/tech.jpg" alt="" />
+                        </div>
+                        <div className="servText">
+                            <div className="servTitle">Technical Maintenance</div>
+                            <p>Ensuring computer systems are running at stable performance and resolving issues promptly.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            {
+            /*
             <div className="third-section">
                 <div className="secTitle">
                     <div className="titleBar"></div>
@@ -75,6 +106,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            */}
         </>
     );
 }
