@@ -65,7 +65,9 @@ export default function Home() {
                 <div className="secContent">
                     <div className="servCard">
                         <div className="servImage">
-                            <img src="/images/prog.jpg" alt="" />
+                            <a href="https://unsplash.com/photos/code-written-on-a-screen-likely-programming-related-3v1CT8JoKOE" target="_blank" rel="noopener noreferrer">
+                                <img src="/images/prog.jpg" alt=""></img>
+                            </a>
                         </div>
                         <div className="servText">
                             <div className="servTitle">Programming</div>
@@ -74,7 +76,9 @@ export default function Home() {
                     </div>
                     <div className="servCard">
                         <div className="servImage">
-                            <img src="/images/media.jpg" alt="" />
+                            <a href="https://unsplash.com/photos/green-and-black-audio-mixer-2jTu7H9l6JA" target="_blank" rel="noopener noreferrer">
+                                <img src="/images/media.jpg" alt="" />
+                            </a>
                         </div>
                         <div className="servText">
                             <div className="servTitle">Media & Creativity</div>
@@ -83,7 +87,9 @@ export default function Home() {
                     </div>
                     <div className="servCard">
                         <div className="servImage">
-                            <img src="/images/tech.jpg" alt="" />
+                            <a href="https://unsplash.com/photos/person-holding-black-and-silver-dj-controller-sMKUYIasyDM" target="_blank" rel="noopener noreferrer">
+                                <img src="/images/tech.jpg" alt="" />
+                            </a>
                         </div>
                         <div className="servText">
                             <div className="servTitle">Technical Maintenance</div>

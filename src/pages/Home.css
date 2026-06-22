@@ -110,6 +110,7 @@
   margin-top: 30px;
   gap: 20px;
   width: 80%;
+  margin-bottom: 50px;
 }
 .servCard {
   width: 600px;
@@ -144,6 +145,7 @@
 .servText p {
   font-family: ComicRelief-Regular;
   text-indent: 50px;
+  text-align: justify;
 }
 
 .third-section {
@@ -174,5 +176,10 @@
 @media (max-width: 523px) {
   .intro {
     font-size: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .servCard {
+    height: 350px;
   }
 }
