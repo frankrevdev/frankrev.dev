@@ -68,7 +68,8 @@
     font-family: ComicRelief-Regular;
     font-size: 20px;
     white-space: pre-line;
-    color: var(--text-color)
+    color: var(--text-color);
+    text-align: justify;
 }
 .externalLinks {
     color: var(--text-link-color);

@@ -81,18 +81,28 @@ const software = [
 const hardware = [
     {
         key: "setup",
-        name: "Basic Computer System Installation and Setup",
+        name: "Computer System Installation and Setup",
         src: new URL("../assets/Images/p/about/icons/skills/hardware/setup.svg", import.meta.url).href
     },
     {
         key: "config",
-        name: "Basic Computer Network Configuration",
+        name: "Computer Network Configuration",
         src: new URL("../assets/Images/p/about/icons/skills/hardware/configuration.svg", import.meta.url).href
     },
     {
         key: "proto",
         name: "Basic Electronic Prototyping",
         src: new URL("../assets/Images/p/about/icons/skills/hardware/prototype.svg", import.meta.url).href
+    },
+    {
+        key: "perp",
+        name: "Peripheral Diagnostic and Repair",
+        src: new URL("../assets/Images/p/about/icons/skills/hardware/peripherals.svg", import.meta.url).href
+    },
+    {
+        key: "cctv",
+        name: "CCTV Installation and Maintenance",
+        src: new URL("../assets/Images/p/about/icons/skills/hardware/cctv.svg", import.meta.url).href
     }
 ];
 

@@ -48,6 +48,7 @@ export default function Home() {
             <div className="first-section">
                 <div className="intro">
                     <h1>Hello there visitor,<br/>Welcome!<br/><div className="smiley">ツ</div></h1>
+                    <h6>"Exploring the digital and technical world one step at a time"</h6>
                 </div>
                 <div className="gradientLineBreak1"></div>
                 <div className="gradientLineBreak2"></div>
@@ -93,7 +94,7 @@ export default function Home() {
                         </div>
                         <div className="servText">
                             <div className="servTitle">Technical Maintenance</div>
-                            <p>Ensuring computer systems are running at stable performance and resolving issues promptly.</p>
+                            <p>Ensuring computer systems and peripherals are running at stable performance and resolving issues promptly.</p>
                         </div>
                     </div>
                 </div>

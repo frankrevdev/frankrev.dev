@@ -68,6 +68,12 @@
 .intro h1 .smiley {
   -webkit-text-stroke-width: 5px;
 }
+.intro h6 {
+  font-family: ComicRelief-Regular;
+  color: var(--text-color);
+  margin-top: 20px;
+}
+
 .gradientLineBreak1 {
   position: absolute;
   width: 100%;
@@ -180,6 +186,11 @@
 }
 @media (max-width: 480px) {
   .servCard {
-    height: 350px;
+    height: 400px;
+  }
+}
+@media (max-width: 370px) {
+  .servCard {
+    height: 500px;
   }
 }
